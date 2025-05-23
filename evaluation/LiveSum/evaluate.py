@@ -152,7 +152,7 @@ if __name__ == "__main__":
 
     result = evaluate(args.data, args.output)
     """
-    result = Evaluate( "/home/jiangpeiwen2/jiangpeiwen2/Counter_Agent/data/LiveSum/data", 
-                      "/home/jiangpeiwen2/jiangpeiwen2/Counter_Agent/data/LiveSum/data/predicts")
+    result = Evaluate( "workspaceCounter_Agent/data/LiveSum/data", 
+                      "workspaceCounter_Agent/data/LiveSum/data/predicts")
     print(result.describe().loc["mean"])
     pass

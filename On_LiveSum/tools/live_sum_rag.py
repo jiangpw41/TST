@@ -198,50 +198,17 @@ def post_process( save_path, test_data_path):
         csv_format = to_csv( points_count )
         save_data( csv_format, _save_path )
 
-    """
-    test 754 tables for /home/jiangpeiwen2/jiangpeiwen2/Counter_Agent/data/LiveSum/data/predicts
-    Error rate = 12.931034482758621 58.80305039787798 99.90053050397879
-    Easy-RMSE       0.264258
-    Easy-MAE        0.166446
-    Easy-EM        12.931034
-    Medium-RMSE     2.111202
-    Medium-MAE      1.379973
-    Medium-EM      58.803050
-    Hard-RMSE      10.993737
-    Hard-MAE       10.361074
-    Hard-EM        99.900531
-    AVG-RMSE        5.720207
-    AVG-MAE         3.321867
-    AVG-EM         57.609416
-    Name: mean, dtype: float64
-
-    Error rate = 42.738726790450926 37.78183023872679 84.88063660477454
-    Easy-RMSE       1.616042
-    Easy-MAE        1.007958
-    Easy-EM        42.738727
-    Medium-RMSE     1.109628
-    Medium-MAE      0.626824
-    Medium-EM      37.781830
-    Hard-RMSE       3.419160
-    Hard-MAE        2.724469
-    Hard-EM        84.880637
-    AVG-RMSE        2.122795
-    AVG-MAE         1.246519
-    AVG-EM         50.795756
-    Name: mean, dtype: float64
-    """
-
 
 
 
 if __name__ == "__main__":
     
-    _ROOT_PATH = "/home/jiangpeiwen2/jiangpeiwen2/TKGT"
+    _ROOT_PATH = "workspace/TKGT"
     test_path = os.path.join( _ROOT_PATH, "data/LiveSum/test.json")
-    save_path = '/home/jiangpeiwen2/jiangpeiwen2/TKGT/test/LiveSum/v2'
+    save_path = 'workspace/TKGT/test/LiveSum/v2'
     test_list = load_data( test_path, "json")           # 754
     get_prompt( test_list, save_path )
     '''
-    save_path = "/home/jiangpeiwen2/jiangpeiwen2/TKGT/test/LiveSum/v1"
-    test_data_path = "/home/jiangpeiwen2/jiangpeiwen2/TKGT/data/LiveSum/test.json"
+    save_path = "workspace/TKGT/test/LiveSum/v1"
+    test_data_path = "workspace/TKGT/data/LiveSum/test.json"
     post_process( save_path, test_data_path)'''

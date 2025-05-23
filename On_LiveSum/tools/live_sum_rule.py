@@ -80,20 +80,3 @@ def main_rule( test_list, _OUTPUT_PATH):
         points_count = single_count( text )
         csv_format = to_csv( points_count )
         save_data( csv_format, save_path )
-
-"""
-Error rate = 42.738726790450926 37.78183023872679 84.88063660477454
-Easy-RMSE       1.616042
-Easy-MAE        1.007958
-Easy-EM        42.738727
-Medium-RMSE     1.109628
-Medium-MAE      0.626824
-Medium-EM      37.781830
-Hard-RMSE       3.419160
-Hard-MAE        2.724469
-Hard-EM        84.880637
-AVG-RMSE        2.122795
-AVG-MAE         1.246519
-AVG-EM         50.795756
-Name: mean, dtype: float64
-"""

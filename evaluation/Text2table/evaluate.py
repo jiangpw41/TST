@@ -210,8 +210,8 @@ def eval_main( dataset, loaded_pair_list, results_save_path, eval_type="multi_en
 
 if __name__=="__main__":
     dataset = "CPL_dynamic_static_baseline_Baichuan2-7B-Chat"
-    loaded_pair_list = load_data( "/home/jiangpeiwen2/jiangpeiwen2/T-Tuple-T/CPL_pair_filter_CPL_dynamic_tabel_TTT_ChatGLM3-6B-5epoch.pickle", "pickle")
-    results_save_path = '/home/jiangpeiwen2/jiangpeiwen2/TKGT/evaluation/CountCPL/results.json' 
+    loaded_pair_list = load_data( "workspaceT-Tuple-T/CPL_pair_filter_CPL_dynamic_tabel_TTT_ChatGLM3-6B-5epoch.pickle", "pickle")
+    results_save_path = 'workspaceTKGT/evaluation/CountCPL/results.json' 
     eval_type = "multi_entity"
     eval_main( dataset, loaded_pair_list, results_save_path, eval_type )
     

@@ -1,12 +1,12 @@
-cd /home/jiangpeiwen2/jiangpeiwen2/workspace/LLaMA-Factory
+cd workspace/workspace/LLaMA-Factory
 echo "Current directory is: $(pwd)"
 source activate llama_factory
 
 number=4
 
-model_name_or_path="/home/jiangpeiwen2/jiangpeiwen2/workspace/LLMs/Chinese-Mistral-7B-Instruct-v0.1"
-output_dir="/home/jiangpeiwen2/jiangpeiwen2/TKGT/test/CPL_dynamic/v1/models/ft_intermediate/$number"
-export_dir="/home/jiangpeiwen2/jiangpeiwen2/TKGT/test/CPL_dynamic/v1/models/$number"
+model_name_or_path="workspace/workspace/LLMs/Chinese-Mistral-7B-Instruct-v0.1"
+output_dir="workspace/TKGT/test/CPL_dynamic/v1/models/ft_intermediate/$number"
+export_dir="workspace/TKGT/test/CPL_dynamic/v1/models/$number"
 
 CUDA_VISIBLE_DEVICES=3 python src/train_bash.py \
     --stage sft \
@@ -40,7 +40,7 @@ CUDA_VISIBLE_DEVICES=3 python src/train_bash.py \
     --ddp_timeout 180000000 \
     --plot_loss \
     --fp16 \
-    --resume_from_checkpoint /home/jiangpeiwen2/jiangpeiwen2/TKGT/test/CPL_dynamic/v1/models/ft_intermediate/4/checkpoint-2200 \
+    --resume_from_checkpoint workspace/TKGT/test/CPL_dynamic/v1/models/ft_intermediate/4/checkpoint-2200 \
 
 
 echo "微调完成，开始merge"

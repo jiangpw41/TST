@@ -161,8 +161,8 @@ if __name__ == "__main__":
                 prefix_list.append( pre+ field)
     prefix_list
     from wayne_utils import load_data, save_data
-    version_dir = "/home/jiangpeiwen2/jiangpeiwen2/projects/TKGT/test/CPL_dynamic/v1"
-    _ROOT_PATH = "/home/jiangpeiwen2/jiangpeiwen2/projects/TKGT"
+    version_dir = "workspaceprojects/TKGT/test/CPL_dynamic/v1"
+    _ROOT_PATH = "workspaceprojects/TKGT"
 
     def get_number( line, prompt):
         if "：[]" in prompt:

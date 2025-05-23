@@ -1,12 +1,12 @@
-cd /home/jiangpeiwen2/jiangpeiwen2/workspace/LLaMA-Factory
+cd workspace/workspace/LLaMA-Factory
 echo "Current directory is: $(pwd)"
 source activate llama_factory
 
 number=5
 
-model_name_or_path="/home/jiangpeiwen2/jiangpeiwen2/workspace/LLMs/Qwen1.5-7B-Chat"
-output_dir="/home/jiangpeiwen2/jiangpeiwen2/TKGT/test/CPL_dynamic/v1/models/ft_intermediate/$number"
-export_dir="/home/jiangpeiwen2/jiangpeiwen2/TKGT/test/CPL_dynamic/v1/models/$number"
+model_name_or_path="workspace/workspace/LLMs/Qwen1.5-7B-Chat"
+output_dir="workspace/TKGT/test/CPL_dynamic/v1/models/ft_intermediate/$number"
+export_dir="workspace/TKGT/test/CPL_dynamic/v1/models/$number"
 
 accelerate launch \
     --config_file examples/accelerate/single_config.yaml \
@@ -41,7 +41,7 @@ accelerate launch \
     --ddp_timeout 180000000 \
     --plot_loss \
     --fp16 \
-    #--resume_from_checkpoint /home/jiangpeiwen2/jiangpeiwen2/workspace/TKGT/Hybird_RAG/0ft_data_prep/ft_models/8/checkpoint-12000 \
+    #--resume_from_checkpoint workspace/workspace/TKGT/Hybird_RAG/0ft_data_prep/ft_models/8/checkpoint-12000 \
 
 # wait:没有用&后台运行
 
